@@ -1,0 +1,80 @@
+<!--
+/**
+ * @author Scott Lewis <scott@atomiclotus.net>
+ * @copyright 2018 Scott Lewis
+ * @version 1.0.0
+ * @url http://github.com/iconifyit
+ * @url https://atomiclotus.net
+ *
+ * ABOUT:
+ *
+ *    This script is a very basic boilerplate for Adobe CEP extensions.
+ *
+ * NO WARRANTIES:
+ *
+ *   You are free to use, modify, and distribute this script as you see fit.
+ *   No credit is required but would be greatly appreciated.
+ *
+ *   THIS SCRIPT IS OFFERED AS-IS WITHOUT ANY WARRANTY OR GUARANTEES OF ANY KIND.
+ *   YOU USE THIS SCRIPT COMPLETELY AT YOUR OWN RISK AND UNDER NO CIRCUMSTANCES WILL
+ *   THE DEVELOPER AND/OR DISTRIBUTOR OF THIS SCRIPT BE HELD LIABLE FOR DAMAGES OF
+ *   ANY KIND INCLUDING LOSS OF DATA OR DAMAGE TO HARDWARE OR SOFTWARE. IF YOU DO
+ *   NOT AGREE TO THESE TERMS, DO NOT USE THIS SCRIPT.
+ */
+ -->
+<!DOCTYPE html>
+<html class="spectrum spectrum--medium spectrum--light">
+    <head>
+        <meta charset="utf-8">
+        <title>CEP Webpack Boilerplate</title>
+
+<!--        &lt;!&ndash; Include global variables first &ndash;&gt;-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/vars/dist/spectrum-global.css">-->
+
+<!--        &lt;!&ndash; Include only the scales your application needs &ndash;&gt;-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/vars/dist/spectrum-medium.css">-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/vars/dist/spectrum-large.css">-->
+
+<!--        &lt;!&ndash; Include only the colorstops your application needs &ndash;&gt;-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/vars/dist/spectrum-lightest.css">-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/vars/dist/spectrum-light.css">-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/vars/dist/spectrum-dark.css">-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/vars/dist/spectrum-darkest.css">-->
+
+<!--        &lt;!&ndash; Include index-vars.css for all components you need &ndash;&gt;-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/page/dist/index-vars.css">-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/typography/dist/index-vars.css">-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/icon/dist/index-vars.css">-->
+<!--        <link rel="stylesheet" href="/node_modules/@spectrum-css/button/dist/index-vars.css">-->
+<!--        <link rel="stylesheet" href="/client/theme/style.css">-->
+        <!--
+        <script>
+            console.log('test', typeof cep_node);
+            console.log('test', typeof require);
+        </script>
+        -->
+    </head>
+    <body>
+        <div id="wrapper">
+            <section class="content"></section>
+            <section class="buttons">
+                <button id="info-button" class="topcoat-button--large--cta" disabled>Get Info</button>
+            </section>
+        </div>
+        <!--scripts-->
+        <script>if (typeof module  === 'object') { window.module = module; module = undefined;    }</script>
+        <script>if (typeof exports === 'object') { window.exports = exports; exports = undefined; }</script>
+
+        <script>
+            var client,
+                csInterface;
+        </script>
+
+        <script src="lib/CSInterface/CSInterface.js"></script>
+        <script src="lib/jQuery/jquery.3.3.1.min.js"></script>
+        <script src="index.js"></script>
+
+        <script>if (window.module)  module  = window.module;</script>
+        <script>if (window.exports) exports = window.exports;</script>
+    </body>
+</html>
