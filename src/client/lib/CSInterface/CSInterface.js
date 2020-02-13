@@ -30,7 +30,7 @@ CSXSWindowType._MODELESS = "Modeless";
 CSXSWindowType._MODAL_DIALOG = "ModalDialog";
 
 /** EvalScript error message */
-EvalScript_ErrMessage = "EvalScript error.";
+let EvalScript_ErrMessage = "EvalScript error.";
 
 /**
  * @class Version
@@ -106,6 +106,8 @@ function Runtime(name, versionRange)
     this.name = name;
     this.versionRange = versionRange;
 }
+
+
 
 /**
  * @class Extension
@@ -1192,8 +1194,28 @@ CSInterface.prototype.getWindowTitle = function()
     return window.__adobe_cep__.invokeSync("getWindowTitle", "");
 };
 
-var csInterface = new CSInterface();
+const csInterface = new CSInterface();
 
-if (typeof module != 'undefined') {
-    module.exports = csInterface;
+export {
+    csInterface,
+    ApiVersion,
+    AppSkinInfo,
+    ColorType,
+    ContextMenuItemStatus,
+    CSEvent,
+    CSXSWindowType,
+    Direction,
+    Extension,
+    GradientColor,
+    GradientStop,
+    HostCapabilities,
+    HostEnvironment,
+    MenuItemStatus,
+    RGBColor,
+    Runtime,
+    SystemPath,
+    UIColor,
+    Version,
+    VersionBound,
+    VersionRange
 }

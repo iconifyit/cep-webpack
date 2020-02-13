@@ -21,7 +21,7 @@
  *   NOT AGREE TO THESE TERMS, DO NOT USE THIS SCRIPT.
  */
 
-import csInterface from "../../lib/CSInterface/CSInterface";
+import {csInterface, MenuItemStatus} from "../../lib/CSInterface/CSInterface";
 
 class FlyoutMenu {
 
@@ -29,17 +29,15 @@ class FlyoutMenu {
      * @constructor
      */
     constructor() {
-        this.Menu = {
-            state : {},
-            items : []
-        };
+        this.state = {};
+        this.items = [];
     }
 
     /**
      * Add a divider item.
      */
     divider() {
-        this.Menu.items.push( this.menuDivider() );
+        this.items.push( this.menuDivider() );
     }
 
     /**
@@ -60,21 +58,10 @@ class FlyoutMenu {
      */
     menuItem(id, label, enabled, checked) {
 
-        if (typeof id === 'undefined') {
-            throw 'MenuItem must have an id';
-        }
-
-        if (typeof label === 'undefined') {
-            throw 'MenuItem must have a label';
-        }
-
-        if (typeof enabled === 'undefined') {
-            enabled = true;
-        }
-
-        if (typeof checked === 'unedefined') {
-            checked = false;
-        }
+        if (typeof id === 'undefined')       throw 'MenuItem must have an id';
+        if (typeof label === 'undefined')    throw 'MenuItem must have a label';
+        if (typeof enabled === 'undefined')  enabled = true;
+        if (typeof checked === 'unedefined') checked = false;
 
         return `<MenuItem Id="${id}" Label="${label}" Enabled="${enabled}" Checked="${checked}" />`;
     }
@@ -87,14 +74,39 @@ class FlyoutMenu {
      * @param checked
      */
     add(id, label, enabled, checked) {
-        this.Menu.items.push(
+        this.items.push(
             this.menuItem(id, label, enabled, checked)
         );
-        this.Menu.state[id] = {
-            enabled : enabled,
-            checked : checked,
-            text    : label
-        };
+        this.state[id] = new MenuItemStatus(label, enabled, checked);
+    }
+
+    /**
+     * Toggles menu item's checked state.
+     * @param menuItemId
+     */
+    toggleChecked(menuItemId) {
+        this.state[menuItemId].checked = ! this.state[menuItemId].checked;
+        this.updateMenuItemState(menuItemId);
+    }
+
+    /**
+     * Toggles menu item's enabled state.
+     * @param menuItemId
+     */
+    toggleEnabled(menuItemId) {
+        this.state[menuItemId].enabled = ! this.state[menuItemId].enabled;
+        this.updateMenuItemState(menuItemId);
+    }
+
+    /**
+     * Updates menu item's state.
+     * @param menuItemId
+     */
+    updateMenuItemState(menuItemId) {
+        window.__adobe_cep__.invokeSync(
+            "updatePanelMenuItem",
+            JSON.stringify( this.state[menuItemId] )
+        );
     }
 
     /**
@@ -102,7 +114,7 @@ class FlyoutMenu {
      * @returns {*}
      */
     getState() {
-        return this.Menu.state;
+        return this.state;
     }
 
     /**
@@ -121,7 +133,7 @@ class FlyoutMenu {
      * @returns {*|jQuery}
      */
     toString() {
-        const menuItems = this.Menu.items.join('\n');
+        const menuItems = this.items.join('\n');
         return `<Menu>${menuItems}</Menu>`;
     }
 

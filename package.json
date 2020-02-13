@@ -22,5 +22,35 @@
   "bugs": {
     "url": "https://github.com/iconifyit/cep-webpack/issues"
   },
-  "homepage": "https://github.com/iconifyit/cep-webpack#readme"
+  "homepage": "https://github.com/iconifyit/cep-webpack#readme",
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@spectrum-css/button": "^2.0.3",
+    "@spectrum-css/icon": "^2.0.3",
+    "@spectrum-css/page": "^2.0.3",
+    "@spectrum-css/typography": "^2.0.3",
+    "@spectrum-css/vars": "^2.0.3",
+    "copy-webpack-plugin": "^5.1.1",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-jsvalidate": "^5.0.0",
+    "gulp-string-replace": "^1.1.2",
+    "gulp-uglify": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
 }

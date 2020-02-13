@@ -1,0 +1,89 @@
+nohup: ./webpack.client.sh: Permission denied
+nohup: ./webpack.host.sh: Permission denied
+nohup: source: No such file or directory
+<s> [webpack.Progress] 0% compiling
+<s> [webpack.Progress] 10% building 0/0 modules 0 active 
+
+webpack is watching the files…
+
+<s> [webpack.Progress] 10% building 0/1 modules 1 active /Users/scott/github/iconify/cep-webpack/node_modules/babel-loader/lib/index.js??ref--4!/Users/scott/github/iconify/cep-webpack/src/host/index.jsx
+<s> [webpack.Progress] 10% building 1/1 modules 0 active 
+<s> [webpack.Progress] 70% building 1/1 modules 0 active 
+<s> [webpack.Progress] 70% finish module graph
+<s> [webpack.Progress] 70% finish module graph FlagDependencyExportsPlugin
+<s> [webpack.Progress] 70% sealing
+<s> [webpack.Progress] 70% sealing WarnCaseSensitiveModulesPlugin
+<s> [webpack.Progress] 72% basic dependencies optimization
+<s> [webpack.Progress] 72% dependencies optimization
+<s> [webpack.Progress] 73% advanced dependencies optimization
+<s> [webpack.Progress] 73% after dependencies optimization
+<s> [webpack.Progress] 71% chunk graph
+<s> [webpack.Progress] 71% after chunk graph
+<s> [webpack.Progress] 71% after chunk graph WebAssemblyModulesPlugin
+<s> [webpack.Progress] 74% optimizing
+<s> [webpack.Progress] 74% basic module optimization
+<s> [webpack.Progress] 75% module optimization
+<s> [webpack.Progress] 75% advanced module optimization
+<s> [webpack.Progress] 76% after module optimization
+<s> [webpack.Progress] 76% basic chunk optimization
+<s> [webpack.Progress] 76% basic chunk optimization EnsureChunkConditionsPlugin
+<s> [webpack.Progress] 76% basic chunk optimization RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 76% basic chunk optimization MergeDuplicateChunksPlugin
+<s> [webpack.Progress] 77% chunk optimization
+<s> [webpack.Progress] 77% advanced chunk optimization
+<s> [webpack.Progress] 77% advanced chunk optimization SplitChunksPlugin
+<s> [webpack.Progress] 77% advanced chunk optimization RemoveEmptyChunksPlugin
+<s> [webpack.Progress] 77% after chunk optimization
+<s> [webpack.Progress] 78% module and chunk tree optimization
+<s> [webpack.Progress] 78% after module and chunk tree optimization
+<s> [webpack.Progress] 79% basic chunk modules optimization
+<s> [webpack.Progress] 80% chunk modules optimization
+<s> [webpack.Progress] 80% advanced chunk modules optimization
+<s> [webpack.Progress] 81% after chunk modules optimization
+<s> [webpack.Progress] 81% module reviving
+<s> [webpack.Progress] 81% module reviving RecordIdsPlugin
+<s> [webpack.Progress] 82% module order optimization
+<s> [webpack.Progress] 82% advanced module order optimization
+<s> [webpack.Progress] 83% before module ids
+<s> [webpack.Progress] 83% before module ids NamedModulesPlugin
+<s> [webpack.Progress] 83% module ids
+<s> [webpack.Progress] 84% module id optimization
+<s> [webpack.Progress] 84% module id optimization
+<s> [webpack.Progress] 85% chunk reviving
+<s> [webpack.Progress] 85% chunk reviving RecordIdsPlugin
+<s> [webpack.Progress] 85% chunk order optimization
+<s> [webpack.Progress] 85% chunk order optimization OccurrenceOrderChunkIdsPlugin
+<s> [webpack.Progress] 86% before chunk ids
+<s> [webpack.Progress] 86% before chunk ids NamedChunksPlugin
+<s> [webpack.Progress] 86% chunk id optimization
+<s> [webpack.Progress] 87% after chunk id optimization
+<s> [webpack.Progress] 87% record modules
+<s> [webpack.Progress] 87% record modules RecordIdsPlugin
+<s> [webpack.Progress] 87% record chunks
+<s> [webpack.Progress] 87% record chunks RecordIdsPlugin
+<s> [webpack.Progress] 88% hashing
+<s> [webpack.Progress] 88% after hashing
+<s> [webpack.Progress] 89% record hash
+<s> [webpack.Progress] 89% module assets processing
+<s> [webpack.Progress] 90% chunk assets processing
+<s> [webpack.Progress] 90% additional chunk assets processing
+<s> [webpack.Progress] 91% recording
+<s> [webpack.Progress] 92% additional asset processing
+<s> [webpack.Progress] 92% chunk asset optimization
+<s> [webpack.Progress] 93% after chunk asset optimization
+<s> [webpack.Progress] 93% asset optimization
+<s> [webpack.Progress] 94% after asset optimization
+<s> [webpack.Progress] 94% after seal
+<s> [webpack.Progress] 95% emitting
+<s> [webpack.Progress] 95% emitting clean-webpack-plugin
+<s> [webpack.Progress] 98% after emitting
+<s> [webpack.Progress] 100% 
+
+Hash: c6d35eb656191e45d97b
+Version: webpack 4.41.5
+Time: 853ms
+Built at: 02/10/2020 10:16:30 PM
+          Asset      Size  Chunks             Chunk Names
+host.bundle.jsx  4.53 KiB    host  [emitted]  host
+Entrypoint host = host.bundle.jsx
+[./src/host/index.jsx] 708 bytes {host} [built]

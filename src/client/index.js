@@ -38,6 +38,6 @@ import '../../node_modules/@spectrum-css/button/dist/index-vars.css';
 import './theme/style.css';
 
 import Client from './classes/Client';
-// import csInterface from './lib/CSInterface/CSInterface';
+import csInterface from './lib/CSInterface/CSInterface';
 
 client = new Client();
