@@ -23,7 +23,6 @@
             <DispatchInfo>
                 <Resources>
                     <MainPath>./dist/index.html</MainPath>
-                    <ScriptPath>./dist/host/host.bundle.jsx</ScriptPath>
                     <CEFCommandLine>
                         <Parameter>--enable-nodejs</Parameter>
                         <Parameter>--mixed-context</Parameter>
